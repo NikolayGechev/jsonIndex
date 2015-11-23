@@ -1,0 +1,28 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> JSONIndex </title>
+</head>
+<body>
+
+<script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../bower_components/JSONPath/lib/jsonpath.js"></script>
+<script type="text/javascript" src="../lib/jsonindex.js"></script>
+<script type="text/javascript">
+
+	$.getJSON("store.json", function(json) {
+
+	    var store2_2 = new JSONIndex( json, [
+
+	       { index: "$..name" },
+	       { index: "$..style" },
+	       { left_join: "$.shirt[?(@.owner=={{$.person..id}})].[style, color]" },
+	       { multiple: ["$.shirt.style", "$.shirt.color"] }
+
+	    ] );
+
+	});
+
+</script>
+</body>
+</html>

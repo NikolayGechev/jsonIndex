@@ -1,0 +1,21 @@
+{
+  "name": "JSONPath",
+  "version": "0.0.1",
+  "homepage": "https://github.com/clementlamoureux/JSONPath",
+  "authors": [
+    "Clément Lamoureux"
+  ],
+  "description": "JSONPath Bower package",
+  "main": "lib/jsonpath.js",
+  "keywords": [
+    "jsonpath"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

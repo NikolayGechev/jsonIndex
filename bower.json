@@ -1,0 +1,34 @@
+{
+  "name": "jsonIndex",
+  "homepage": "https://github.com/NikolayGechev/jsonIndex",
+  "authors": [
+    "NikolayGechev <nikigetchev@gmail.com>"
+  ],
+  "description": "Indexing large JavaScript objects by extraction of smaller objects.",
+  "main": "./lib/jsonindex.js",
+  "moduleType": [],
+  "keywords": [
+    "index",
+    "JavsScript",
+    "primary",
+    "key",
+    "forigen",
+    "key",
+    "fast",
+    "search",
+    "big",
+    "data"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "JSONPath": "*"
+  }
+}
