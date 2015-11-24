@@ -122,6 +122,7 @@ Result:
 ```
 
 Indexing multiple columns
+-------------------------
 
 
 ```javascript
