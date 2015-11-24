@@ -93,7 +93,6 @@ Result:
 
 [["Antonio Paz","Lilliana Angelovska"]]
 
-
 ```
 
 Index with Left Join
