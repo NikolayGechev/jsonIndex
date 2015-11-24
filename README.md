@@ -70,8 +70,8 @@ With this json file:
 }
 ```
 
-Indexing one "column"
-
+Indexing one "column":
+----------------------
 
 ```javascript
 
@@ -84,6 +84,67 @@ Indexing one "column"
 	    ] );
 
 	});
+
 ```
 
+Result:
+
+```json
+
+[["Antonio Paz","Lilliana Angelovska"]]
+
+
+```
+
+Index with Left Join
+--------------------
+
+```javascript
+
+
+	$.getJSON("store.json", function(json) {
+
+	    var store2_2 = new JSONIndex( json, [
+
+	       { left_join: "$.shirt[?(@.owner=={{$.person..id}})].[style, color]" }
+
+	    ] );
+
+	});
+
+```
+
+Result:
+
+```json
+
+[[["polo","dress","t-shirt"],["dress","polo","dress","t-shirt"]]]
+
+```
+
+Indexing multiple columns
+
+
+```javascript
+
+	$.getJSON("store.json", function(json) {
+
+	    var store2_2 = new JSONIndex( json, [
+
+	       { multiple: ["$.shirt[*].style", "$.shirt[*].color"] }
+
+	    ] );
+
+	});
+
+```
+
+Result:
+
+```json
+
+[[[["polo"],["blue"]],[["dress"],["white"]],[["t-shirt"],["blue"]],[["dress"],["orange"]],[["polo"],["red"]],[["dress"],["blue"]],[["t-shirt"],["white"]]]]
+
+
+```
 

@@ -14,15 +14,42 @@
 
 	    var store2_2 = new JSONIndex( json, [
 
-	       { index: "$..name" },
-	       { index: "$..style" },
-	       { left_join: "$.shirt[?(@.owner=={{$.person..id}})].[style, color]" },
-	       { multiple: ["$.shirt.style", "$.shirt.color"] }
+	       { index: "$..name" }
 
 	    ] );
 
 	});
 
+	$.getJSON("store.json", function(json) {
+
+	    var store2_2 = new JSONIndex( json, [
+
+	       { index: "$..style" }
+
+	    ] );
+
+	});
+
+	$.getJSON("store.json", function(json) {
+
+	    var store2_2 = new JSONIndex( json, [
+
+	       { left_join: "$.shirt[?(@.owner=={{$.person..id}})].[style, color]" }
+
+	    ] );
+
+	});
+
+	$.getJSON("store.json", function(json) {
+
+	    var store2_2 = new JSONIndex( json, [
+
+	       { multiple: ["$.shirt[*].style", "$.shirt[*].color"] }
+
+	    ] );
+
+	});
+	
 </script>
 </body>
 </html>
