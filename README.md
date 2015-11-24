@@ -11,7 +11,9 @@ Indexing large JavaScript objects by extraction of smaller objects.
 Installation
 ------------
 
-~ bower install https://github.com/NikolayGechev/jsonIndex.git
+```shell
+bower install https://github.com/NikolayGechev/jsonIndex.git
+```
 
 Crash course
 ------------
@@ -122,6 +124,7 @@ Result:
 ```
 
 Indexing multiple columns
+-------------------------
 
 
 ```javascript
